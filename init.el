@@ -73,7 +73,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '()
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '(chinese-wbim pangu-spacing counsel-projectile)
+   dotspacemacs-excluded-packages '(chinese-wbim pangu-spacing counsel-projectile evil-search-highlight-persist)
    ;; Defines the behaviour of Spacemacs when downloading packages.
    ;; Possible values are `used', `used-but-keep-unused' and `all'. `used' will
    ;; download only explicitly used packages and remove any unused packages as
@@ -329,7 +329,6 @@ you should place your code here."
     (setq mac-option-modifier 'none))
 
   (evil-leader/set-key "os" 'just-one-space)
-  (global-evil-search-highlight-persist -1)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
