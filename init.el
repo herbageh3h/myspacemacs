@@ -41,8 +41,8 @@ values."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      better-defaults
-     ivy
      helm
+     ivy
      ibuffer
      (auto-completion :variables auto-completion-enable-snippets-in-popup t)
      emacs-lisp
@@ -55,6 +55,7 @@ values."
      html
      javascript
      java
+     sql
      herb
      ;; git
      ;; markdown
@@ -62,8 +63,8 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     spell-checking
-     syntax-checking
+     ;; spell-checking
+     ;; syntax-checking
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
@@ -102,7 +103,7 @@ values."
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
    ;; when the current branch is not `develop'. (default t)
-   dotspacemacs-check-for-update t
+   dotspacemacs-check-for-update nil
    ;; One of `vim', `emacs' or `hybrid'.
    ;; `hybrid' is like `vim' except that `insert state' is replaced by the
    ;; `hybrid state' with `emacs' key bindings. The value can also be a list
@@ -317,7 +318,6 @@ you should place your code here."
         backup-directory-alist "~/backup")
 
   (setq-default require-final-newline nil)
-
   (global-company-mode t)
 
   (spacemacs//set-monospaced-font "Source Code Pro" "Hiragino Sans GB" 14 16)
@@ -330,11 +330,9 @@ you should place your code here."
 
   (evil-leader/set-key "os" 'just-one-space)
   (global-evil-search-highlight-persist -1)
-
-  (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-                           ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-                           ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
+(load custom-file 'no-error 'no-message)
