@@ -4,6 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(paradox-github-token t)
+ '(eclim-eclipse-dirs '("/Users/huanghao/eclipse/Eclipse.app/Contents/Eclipse"))
+ '(eclim-executable "/Users/huanghao/eclipse/Eclipse.app/Contents/Eclipse/eclim")
  '(visible-bell t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
