@@ -22,6 +22,7 @@
       evil-surround
       plsql
       ;;sqlup-mode
+      nodejs-repl
       ))
 
 ;; List of packages to exclude.
@@ -46,6 +47,13 @@
   (global-evil-surround-mode 1)
   )
 
+(defun herb/init-plsql()
+  (use-package plsql))
+
+(defun herb/init-nodejs-repl()
+  (use-package nodejs-repl
+    :init
+    :defer t))
 ;; (defun herb/init-sqlup-mode()
 ;;   (use-package sqlup-mode))
 
